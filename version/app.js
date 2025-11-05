@@ -1,8 +1,12 @@
-var response
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 8080
 
-app.get('/', function (req, res) {
-  response = 'This is version 1 of the app.' + '\n'
+// route utama
+app.get('/', (req, res) => {
+  res.send('Hello OpenShift!')
+})
 
-  //send the response to the client
-  res.send(response)
+app.listen(port, () => {
+  console.log(`App running on port ${port}`)
 })
