@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('Hello OpenShift!')
+  res.send('This is version 2 of the app.\n')
 })
 
 const port = process.env.PORT || 8080
